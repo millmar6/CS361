@@ -1,0 +1,20 @@
+<h1 id="mainHeader">Lucky Lotto</h1>
+
+<h4>Welcome to Lucky Lotto!  Before we get your numbers:</h4>
+
+<div id="formContainer">
+    <form id="userForm">
+        <label for="totalNums">How many numbers do you need?</label>
+        <input type="number" name="totalNums" id="totalNums" min="1" max="6" required><br>
+        <label for="totalPool">How many numbers are in the drawing pool?</label>
+        <input type="number" name="totalPool" id="totalPool" min="1" max="70" required><br>
+        <input type="submit" value="Get my numbers!">
+    </form>
+</div>
+
+<div class="userDisplay">
+    <p id="userNums"></p>
+    <p id="odds"></p>
+</div>
+
+<script src="/js/getNums.js"></script>

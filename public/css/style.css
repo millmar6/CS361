@@ -1,0 +1,40 @@
+#mainHeader {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+h4 {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+#formContainer {
+	display: flex;
+	justify-content: center;
+}
+
+#userForm input {
+	width: 60px;
+	padding-left: 20px;
+	margin-bottom: 20px;
+}
+
+#userForm label {
+	display: inline-block;
+	width: 350px;
+}
+
+#userForm input[type=submit] {
+	width: 300px;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
+
+.userDisplay p {
+	text-align: center;
+	margin-bottom: 20px;
+}
