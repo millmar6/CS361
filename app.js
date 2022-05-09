@@ -16,6 +16,39 @@ app.get('/',function(req,res){
   res.render('lotto');
 });
 
+app.get('/microservice', function(req,res){
+  const tasks = [
+    "Take out the trash",
+    "Do the dishes",
+    "Vacuum",
+    "Change air filters",
+    "Back up computer",
+    "Pay bills",
+    "Read a book",
+    "Review emails",
+    "Mop floors",
+    "Clean windows",
+    "Dust",
+    "Review finances",
+    "Deep clean bathroom",
+    "Deep clean kitchen",
+    "Organize photos",
+    "Laundry",
+    "Meal prep",
+    "Water plants",
+    "Exercise",
+    "Change bedding"
+  ];
+  randomtask = Math.floor(Math.random() * 20);
+  data = {"yourTask":tasks[randomtask]};
+  console.log(data);
+  res.json(data);
+});
+
+app.get('/example',function(req,res){
+  res.render('example');
+});
+
 app.use(function(req,res){
   res.status(404);
   res.render('404');
