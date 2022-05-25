@@ -24,13 +24,13 @@ userForm.addEventListener("submit", function(e) {
 		totalPool: totalPoolValue
 	}
 
-	document.getElementById("userNums").textContent = "Sends the following JSON file to teammate's service: " + JSON.stringify(data);
+	//document.getElementById("userNums").textContent = "Sends the following JSON file to teammate's service: " + JSON.stringify(data);
 	document.getElementById("odds").textContent = "Your odds of winning the jackpot are 1 in " + lottoOdds(totalPoolValue, totalNumsValue) + " good luck!";
 
 
 	// Setup AJAX request
     var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "teammateService", true);
+    xhttp.open("POST", "http://localhost:3000", true);
     xhttp.setRequestHeader("Content-type", "application/json");
 
     // Tell AJAX request how to resolve
@@ -53,6 +53,9 @@ userForm.addEventListener("submit", function(e) {
 doSomething = (data) => {
 	//get reference to html object, display data/numbers
 	let parsedData = JSON.parse(data);
+	//console.log(parsedData);
+	console.log(parsedData['generatedNumbers']);
+	document.getElementById("userNums").textContent = parsedData['generatedNumbers'];
 }
 
 function facto(num){
